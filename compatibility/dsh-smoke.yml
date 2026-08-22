@@ -1,0 +1,12 @@
+schema: 1
+requires_model_turn: false
+web:
+  ready:
+    path: /
+    timeout_seconds: 120
+  assertions:
+    - id: dsh-web-shell
+      method: GET
+      path: /
+      status: 200
+      body_includes: DeepSeek

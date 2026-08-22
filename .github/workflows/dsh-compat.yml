@@ -1,0 +1,25 @@
+name: DSH compatibility guardian
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [guardian-test]
+    paths:
+      - .dsh-compat.yml
+      - compatibility/dsh-smoke.yml
+      - .github/workflows/dsh-compat.yml
+
+permissions:
+  contents: read
+
+jobs:
+  guardian:
+    uses: LCYLYM/dsh-plugin-compat-guardian/.github/workflows/guardian.yml@317e9858dedf2c16c24558b9d448ac7b24190b41
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    with:
+      guardian_repository: LCYLYM/dsh-plugin-compat-guardian
+      guardian_ref: 317e9858dedf2c16c24558b9d448ac7b24190b41
+      runner: ubuntu-24.04
