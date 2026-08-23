@@ -3,6 +3,10 @@ watch:
   channel: latest
 repair:
   dsh_version: 0.1.1-rc.1
+  start_policy: immediate
+budget:
+  max_tokens: 600000
+  max_cny: 3
 plugin:
   workspace: .
   package_json: package.json
@@ -15,4 +19,4 @@ gates:
     - npm run build
     - npm pack --dry-run
 delivery:
-  mode: direct-push
+  mode: pull-request
