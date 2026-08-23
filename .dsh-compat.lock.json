@@ -1,20 +1,20 @@
 {
   "schema": 1,
-  "resetBudget": "Y",
+  "resetBudget": "N",
   "verified": {
-    "snapshot_key": "e9622cf52a3ec5840a92605c703b49b48a1b5348e33ce42577790e3048f10ebb",
-    "source_commit": "1ec9cd1b17ac64e25b8239d0f82f940a08fd9727",
-    "source_tree_digest": "0adf6050ebdc3fb50b56464931069649dbc6f8058019acb84589a8a065ee3a26",
+    "snapshot_key": "21f404dc0e619e7bd639136169db104e90d2d2bab351f0a85144f71267121260",
+    "source_commit": "bbdb4bd134181fc2582b37ae137443a684ee30d6",
+    "source_tree_digest": "9ac17213429a0865beebb8663b1c9f500d948770a49daf1c299ebfb81257b63a",
     "dsh": {
       "package": "@deepseek-ai/dsh",
-      "version": "0.1.1-rc.1",
-      "integrity": "sha512-HVauMT0F7MWUctkxzBcu5PMFc8j0lm0kX+4IbcUsA7Oh+/xv7xhigEDP0SaSOM/kR48U/BldHbZru116DcZz0w==",
-      "graph_digest": "ea444cc8ccd82eeb3fae7c355428b08ec4a01e89289670edd4ae112a40465a28"
+      "version": "0.1.1-rc.2",
+      "integrity": "sha512-UP1UIh6q3Gme/yXRn/QL2P8IsVlv8Shpg22TRJIZPsCRWLm4CBiA1MUvXmJAfsOEETBMLAl+xWPtFw6ICsN3wg==",
+      "graph_digest": "f585d69f7d868ef19178277d2d2fc1b50649d71709ae2f1c3b63da515482ccaa"
     },
     "plugin": {
       "package": "@khorsheed/dsh-ankh-guard",
       "version": "0.1.0-rc.8.9",
-      "tarball_sha256": "1f873e8c0d6124a1ce309d57f080b88b2d14706eb034184ae6b7687c65d663b2",
+      "tarball_sha256": "32be3adcc7cd689320a635fb1f8845ae7389c8d17d1f0c2082b50624e67f6cf7",
       "contract_sha256": "c657729dd57ee25c0ea1e68b58a3772facd62f7afa77161b2803d0f89391423a"
     },
     "runtime": {
@@ -34,50 +34,79 @@
       },
       "runner": {
         "configuredLabel": "ubuntu-24.04",
-        "actualLabel": "GitHub Actions 1000001042",
+        "actualLabel": "GitHub Actions 1000001106",
         "os": "Linux",
         "arch": "x64",
         "githubActions": true
       }
     },
-    "verified_at": "2026-08-23T08:46:51.904Z",
-    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/32629068021"
+    "verified_at": "2026-08-23T09:29:05.932Z",
+    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/32630643094"
   },
   "campaigns": {
     "0.1.1-rc.2": {
-      "epoch": 1,
-      "history": [],
-      "lifetime_active_ms": 0,
-      "lifetime_attempts": 0,
-      "status": "BLOCKED",
+      "epoch": 2,
+      "history": [
+        {
+          "epoch": 1,
+          "status": "BLOCKED",
+          "usage": {
+            "inputTokens": 43675,
+            "outputTokens": 22255,
+            "cacheReadTokens": 1469696,
+            "cacheWriteTokens": 0,
+            "reasoningTokens": 15119,
+            "totalTokens": 1535626,
+            "sessionFiles": 1
+          },
+          "estimated_cny": {
+            "amount": 0.47829,
+            "band": "peak",
+            "revision": "deepseek-public-2026-08-21",
+            "known": true
+          },
+          "active_ms": 306028,
+          "attempts_used": 1,
+          "limits": {
+            "max_tokens": 600000,
+            "max_cny": 3,
+            "max_wall_minutes": 60,
+            "max_attempts": 2
+          },
+          "finished_at": "2026-08-23T09:14:45.221Z"
+        }
+      ],
+      "lifetime_active_ms": 306028,
+      "lifetime_attempts": 1,
+      "status": "PASS",
       "automatic_repair_used": true,
       "attempts_used": 1,
-      "base_commit": "37b415ba4772585df4453444d9422c937de5a9b9",
-      "repair_dsh_version": "0.1.1-rc.1",
+      "base_commit": "bbdb4bd134181fc2582b37ae137443a684ee30d6",
+      "repair_dsh_version": "0.1.1-rc.2",
       "provider": "deepseek-official",
       "model": "deepseek-v4-flash-vision-exp",
       "route_fingerprint": "faaa71af208fbbaf61375c561faef30958eceba731b9fccdcceca6275619706e",
-      "input_fingerprint": "e5daa00461a78b26a0b81b2e315887090d6ba3d75dce77a99df54dae6f35a9c3",
+      "input_fingerprint": "d5ea2e2c92db415fc0866b24e490077ce95fcab161fb5cc83c668bbc8714aee9",
       "usage": {
-        "inputTokens": 43675,
-        "outputTokens": 22255,
-        "cacheReadTokens": 1469696,
+        "inputTokens": 20431,
+        "outputTokens": 11982,
+        "cacheReadTokens": 947584,
         "cacheWriteTokens": 0,
-        "reasoningTokens": 15119,
-        "totalTokens": 1535626,
+        "reasoningTokens": 7372,
+        "totalTokens": 979997,
         "sessionFiles": 1
       },
       "estimated_cny": {
-        "amount": 0.47829,
+        "amount": 0.263889,
         "band": "peak",
         "revision": "deepseek-public-2026-08-21",
         "known": true
       },
-      "active_ms": 306028,
+      "active_ms": 328494,
       "converge_message_sent": false,
       "converge_message_due": false,
       "limits": {
-        "max_tokens": 600000,
+        "max_tokens": 4000000,
         "max_cny": 3,
         "max_wall_minutes": 60,
         "max_attempts": 2
@@ -86,7 +115,16 @@
         "code": "CONTRACT_PROPOSAL_INVALID",
         "message": "repair requested a contract change without one complete fenced YAML contract"
       },
-      "finished_at": "2026-08-23T09:14:45.221Z"
+      "finished_at": "2026-08-23T09:29:06.360Z",
+      "lifetime_usage": {
+        "inputTokens": 43675,
+        "outputTokens": 22255,
+        "cacheReadTokens": 1469696,
+        "cacheWriteTokens": 0,
+        "reasoningTokens": 15119,
+        "totalTokens": 1535626,
+        "sessionFiles": 1
+      }
     }
   }
 }
