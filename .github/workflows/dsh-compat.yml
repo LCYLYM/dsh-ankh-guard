@@ -1,0 +1,24 @@
+name: DSH compatibility guardian
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  guardian:
+    uses: LCYLYM/dsh-plugin-compat-guardian/.github/workflows/guardian.yml@2558a6650ac34f9b5558f80a4e93c2e13dc9e426
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    with:
+      guardian_repository: LCYLYM/dsh-plugin-compat-guardian
+      guardian_ref: 2558a6650ac34f9b5558f80a4e93c2e13dc9e426
+      runner: ubuntu-24.04
+    secrets:
+      deepseek_api_key: ${{ secrets.DEEPSEEK_API_KEY }}
+

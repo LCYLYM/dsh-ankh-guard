@@ -1,0 +1,19 @@
+schema: 1
+watch:
+  channel: latest
+repair:
+  dsh_version: 0.1.1-rc.2
+plugin:
+  workspace: .
+  package_json: package.json
+  profile: web
+smoke:
+  contract: compatibility/dsh-smoke.yml
+gates:
+  repository:
+    - npm test
+    - npm run build
+    - npm pack --dry-run
+delivery:
+  mode: direct-push
+
