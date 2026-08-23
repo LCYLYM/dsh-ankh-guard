@@ -10,14 +10,14 @@ permissions:
 
 jobs:
   guardian:
-    uses: LCYLYM/dsh-plugin-compat-guardian/.github/workflows/guardian.yml@f092193c4373692de9aaa82c2a22a4062c9df27e
+    uses: LCYLYM/dsh-plugin-compat-guardian/.github/workflows/guardian.yml@bc203ad5b853210d4c3d23e8eec4cb6db55bf693
     permissions:
       contents: write
       pull-requests: write
       issues: write
     with:
       guardian_repository: LCYLYM/dsh-plugin-compat-guardian
-      guardian_ref: f092193c4373692de9aaa82c2a22a4062c9df27e
+      guardian_ref: bc203ad5b853210d4c3d23e8eec4cb6db55bf693
       runner: ubuntu-24.04
       target_dsh: 0.1.1-rc.2
     secrets:
