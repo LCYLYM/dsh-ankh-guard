@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "resetBudget": "N",
+  "verified": {
+    "snapshot_key": "ea889c3cf6722324bc8a099214d51de9fe063d4636e530b82bcac0e920c54821",
+    "source_commit": "7787b8ee0480329d30a28fe591eaa2d4be55d17c",
+    "source_tree_digest": "d346c1f522f0955c83add855d5ccf60482ba36abaf6adde0563d3d538237efbb",
+    "dsh": {
+      "package": "@deepseek-ai/dsh",
+      "version": "0.1.1-rc.2",
+      "integrity": "sha512-UP1UIh6q3Gme/yXRn/QL2P8IsVlv8Shpg22TRJIZPsCRWLm4CBiA1MUvXmJAfsOEETBMLAl+xWPtFw6ICsN3wg==",
+      "graph_digest": "f585d69f7d868ef19178277d2d2fc1b50649d71709ae2f1c3b63da515482ccaa"
+    },
+    "plugin": {
+      "package": "@khorsheed/dsh-ankh-guard",
+      "version": "0.1.0-rc.8.9",
+      "tarball_sha256": "1f873e8c0d6124a1ce309d57f080b88b2d14706eb034184ae6b7687c65d663b2",
+      "contract_sha256": "c657729dd57ee25c0ea1e68b58a3772facd62f7afa77161b2803d0f89391423a"
+    },
+    "runtime": {
+      "node": {
+        "exactVersion": "24.19.0",
+        "effectiveRange": ">=24.0.0 <25.0.0",
+        "source": "fallback-node-24-lts",
+        "declarations": {}
+      },
+      "packageManager": {
+        "name": "npm",
+        "exactVersion": "11.17.0",
+        "source": "package-lock.json",
+        "lockfiles": [
+          "package-lock.json"
+        ]
+      },
+      "runner": {
+        "configuredLabel": "ubuntu-24.04",
+        "actualLabel": "GitHub Actions 1000001025",
+        "os": "Linux",
+        "arch": "x64",
+        "githubActions": true
+      }
+    },
+    "verified_at": "2026-08-23T08:42:52.010Z",
+    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/32628893388"
+  },
+  "campaigns": {}
+}
