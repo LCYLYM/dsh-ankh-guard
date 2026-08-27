@@ -3,7 +3,18 @@ watch:
   channel: latest
 repair:
   dsh_version: 0.1.1-rc.2
+  # xpeach exposes an OpenAI-compatible endpoint; keep Guardian's registered
+  # DeepSeek adapter and override its route below.
+  provider: deepseek-official
+  model: grok-4.6
   start_policy: immediate
+  search:
+    enabled: false
+    model: grok-4.6
+credentials:
+  api_key_env: DEEPSEEK_API_KEY
+  base_url: https://fast.xpeach.codes/v1
+  search_base_url: https://fast.xpeach.codes/v1
 budget:
   max_tokens: 4000000
   max_cny: 3
