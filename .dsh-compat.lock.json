@@ -2,14 +2,14 @@
   "schema": 1,
   "resetBudget": "N",
   "verified": {
-    "snapshot_key": "21f404dc0e619e7bd639136169db104e90d2d2bab351f0a85144f71267121260",
-    "source_commit": "bbdb4bd134181fc2582b37ae137443a684ee30d6",
-    "source_tree_digest": "9ac17213429a0865beebb8663b1c9f500d948770a49daf1c299ebfb81257b63a",
+    "snapshot_key": "d6c1fa79129a08b0ab04fd1a0622065d1c74a68a1a4f0de5815a29151dc19db7",
+    "source_commit": "3fce11572af672bce82396c77cb5d1477d07f0c0",
+    "source_tree_digest": "0c68bd1c159bfb7b57d494f3e6e56cdeefa7ff0183b634b5acecc4c0e473f05a",
     "dsh": {
       "package": "@deepseek-ai/dsh",
       "version": "0.1.1-rc.2",
       "integrity": "sha512-UP1UIh6q3Gme/yXRn/QL2P8IsVlv8Shpg22TRJIZPsCRWLm4CBiA1MUvXmJAfsOEETBMLAl+xWPtFw6ICsN3wg==",
-      "graph_digest": "f585d69f7d868ef19178277d2d2fc1b50649d71709ae2f1c3b63da515482ccaa"
+      "graph_digest": "d2e06350c731443286c624fd696211030f85e3d25f36c7bb4ea6d484052edcda"
     },
     "plugin": {
       "package": "@khorsheed/dsh-ankh-guard",
@@ -34,14 +34,14 @@
       },
       "runner": {
         "configuredLabel": "ubuntu-24.04",
-        "actualLabel": "GitHub Actions 1000001106",
+        "actualLabel": "GitHub Actions 1000001244",
         "os": "Linux",
         "arch": "x64",
         "githubActions": true
       }
     },
-    "verified_at": "2026-08-23T09:29:05.932Z",
-    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/32630643094"
+    "verified_at": "2026-08-27T05:56:39.156Z",
+    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/33043998918"
   },
   "campaigns": {
     "0.1.1-rc.2": {
