@@ -7,6 +7,7 @@ repair:
   # /chat/completions to the configured API root.
   provider: deepseek-official
   model: glm-5.3-flash
+  max_output_tokens: 131072
   start_policy: immediate
   search:
     enabled: false

@@ -17,14 +17,14 @@ permissions:
 
 jobs:
   guardian:
-    uses: LCYLYM/dsh-plugin-compat-guardian/.github/workflows/guardian.yml@86452278c5d398ad7e84777f418b4ef530e3132a
+    uses: LCYLYM/dsh-plugin-compat-guardian/.github/workflows/guardian.yml@1c9b69d12ec1789e07df6d3d1ac8bbec34f3c50a
     permissions:
       contents: write
       pull-requests: write
       issues: write
     with:
       guardian_repository: LCYLYM/dsh-plugin-compat-guardian
-      guardian_ref: 86452278c5d398ad7e84777f418b4ef530e3132a
+      guardian_ref: 1c9b69d12ec1789e07df6d3d1ac8bbec34f3c50a
       runner: ubuntu-24.04
     secrets:
       deepseek_api_key: ${{ secrets.DEEPSEEK_API_KEY }}
