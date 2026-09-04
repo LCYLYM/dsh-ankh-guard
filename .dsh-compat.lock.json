@@ -191,12 +191,12 @@
       "status": "BLOCKED_EXTERNAL",
       "automatic_repair_used": true,
       "attempts_used": 1,
-      "base_commit": "823a268a7f4c26b944210736e77f5765d2b953b5",
+      "base_commit": "730ca587132861afc799224c1c74535991acd906",
       "repair_dsh_version": "0.1.1-rc.2",
       "provider": "deepseek-official",
       "model": "glm-5.3-flash",
       "route_fingerprint": "9850ed862a9cfd836d66a21b9b35b76d25b538fa78f3d85af0e29f3014153aac",
-      "input_fingerprint": "316f9672c9756c5a897483789f7b7355c61ee822aef5dc9fa0809480f5ae785b",
+      "input_fingerprint": "b426e563a10e363d6ff8f16d07110a765306b980a4f9d30c5a774cb5caeb4b1c",
       "usage": {
         "inputTokens": 81384,
         "outputTokens": 8003,
@@ -204,7 +204,7 @@
         "cacheWriteTokens": 0,
         "reasoningTokens": 5355,
         "totalTokens": 395051,
-        "sessionFiles": 2
+        "sessionFiles": 3
       },
       "estimated_cny": {
         "amount": null,
@@ -212,20 +212,20 @@
         "revision": "deepseek-public-2026-08-21",
         "known": false
       },
-      "active_ms": 406022,
+      "active_ms": 469468,
       "converge_message_sent": false,
       "converge_message_due": false,
       "limits": {
         "max_tokens": 4000000,
         "max_cny": 3,
         "max_wall_minutes": 60,
-        "max_attempts": 2
+        "max_attempts": 3
       },
       "blocker": {
         "code": "MODEL_RATE_LIMITED",
         "message": "模型服务限流（429），等待一分钟后最多重试一次；仍失败则冻结定时重跑。"
       },
-      "finished_at": "2026-09-04T12:09:17.047Z",
+      "finished_at": "2026-09-04T12:16:35.387Z",
       "lifetime_usage": {
         "inputTokens": 883768,
         "outputTokens": 84430,
