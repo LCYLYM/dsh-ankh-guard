@@ -3,6 +3,7 @@ watch:
   channel: 0.1.2-rc.1
 repair:
   dsh_version: 0.1.1-rc.2
+  max_attempts: 3
   # This gateway exposes an OpenAI-compatible API. DSH appends
   # /chat/completions to the configured API root.
   provider: deepseek-official
