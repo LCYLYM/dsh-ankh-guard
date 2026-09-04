@@ -24,7 +24,7 @@ jobs:
       issues: write
     with:
       guardian_repository: LCYLYM/dsh-plugin-compat-guardian
-      guardian_ref: 2ea5624cc7b0c6ededb613437e12b89dc5a895d5
+      guardian_ref: d7bba2e8431c342e2405ffa170f975955937669b
       runner: ubuntu-24.04
     secrets:
       deepseek_api_key: ${{ secrets.DEEPSEEK_API_KEY }}
