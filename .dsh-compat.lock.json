@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "resetBudget": "Y",
+  "resetBudget": "N",
   "verified": {
     "snapshot_key": "21f404dc0e619e7bd639136169db104e90d2d2bab351f0a85144f71267121260",
     "source_commit": "bbdb4bd134181fc2582b37ae137443a684ee30d6",
@@ -127,7 +127,7 @@
       }
     },
     "0.1.2-rc.1": {
-      "epoch": 3,
+      "epoch": 4,
       "history": [
         {
           "epoch": 1,
@@ -184,27 +184,55 @@
             "max_attempts": 2
           },
           "finished_at": "2026-09-04T10:02:48.258Z"
+        },
+        {
+          "epoch": 3,
+          "status": "BLOCKED_EXTERNAL",
+          "usage": {
+            "inputTokens": 81384,
+            "outputTokens": 8003,
+            "cacheReadTokens": 305664,
+            "cacheWriteTokens": 0,
+            "reasoningTokens": 5355,
+            "totalTokens": 395051,
+            "sessionFiles": 3
+          },
+          "estimated_cny": {
+            "amount": null,
+            "band": "low_price",
+            "revision": "deepseek-public-2026-08-21",
+            "known": false
+          },
+          "active_ms": 469468,
+          "attempts_used": 1,
+          "limits": {
+            "max_tokens": 4000000,
+            "max_cny": 3,
+            "max_wall_minutes": 60,
+            "max_attempts": 3
+          },
+          "finished_at": "2026-09-04T12:16:35.387Z"
         }
       ],
-      "lifetime_active_ms": 3553960,
-      "lifetime_attempts": 3,
-      "status": "BLOCKED_EXTERNAL",
+      "lifetime_active_ms": 4023428,
+      "lifetime_attempts": 4,
+      "status": "BLOCKED",
       "automatic_repair_used": true,
       "attempts_used": 1,
-      "base_commit": "730ca587132861afc799224c1c74535991acd906",
+      "base_commit": "37dd073c048d8ea3d4aa2f69be7f1b74946dcc55",
       "repair_dsh_version": "0.1.1-rc.2",
       "provider": "deepseek-official",
-      "model": "glm-5.3-flash",
-      "route_fingerprint": "9850ed862a9cfd836d66a21b9b35b76d25b538fa78f3d85af0e29f3014153aac",
-      "input_fingerprint": "b426e563a10e363d6ff8f16d07110a765306b980a4f9d30c5a774cb5caeb4b1c",
+      "model": "qwen3.8-flash",
+      "route_fingerprint": "2b1e701ab3577aba89368926ff73c468d82cc6b8cd0a052fae767f3540410c3b",
+      "input_fingerprint": "96f277091c60d6eba11d44d7dd7942c993bdc500b05762cde6e7cf6dc76a37cc",
       "usage": {
-        "inputTokens": 81384,
-        "outputTokens": 8003,
-        "cacheReadTokens": 305664,
+        "inputTokens": 12547,
+        "outputTokens": 90,
+        "cacheReadTokens": 3072,
         "cacheWriteTokens": 0,
-        "reasoningTokens": 5355,
-        "totalTokens": 395051,
-        "sessionFiles": 3
+        "reasoningTokens": 14,
+        "totalTokens": 15709,
+        "sessionFiles": 1
       },
       "estimated_cny": {
         "amount": null,
@@ -212,7 +240,7 @@
         "revision": "deepseek-public-2026-08-21",
         "known": false
       },
-      "active_ms": 469468,
+      "active_ms": 69641,
       "converge_message_sent": false,
       "converge_message_due": false,
       "limits": {
@@ -222,18 +250,18 @@
         "max_attempts": 3
       },
       "blocker": {
-        "code": "MODEL_RATE_LIMITED",
-        "message": "模型服务限流（429），等待一分钟后最多重试一次；仍失败则冻结定时重跑。"
+        "code": "COMMAND_FAILED",
+        "message": "dsh --profile headless --patch <REPAIR_OVERLAY> <REPAIR_PROMPT> exited with code 1"
       },
-      "finished_at": "2026-09-04T12:16:35.387Z",
+      "finished_at": "2026-09-04T12:51:59.494Z",
       "lifetime_usage": {
-        "inputTokens": 883768,
-        "outputTokens": 84430,
-        "cacheReadTokens": 9290944,
+        "inputTokens": 965152,
+        "outputTokens": 92433,
+        "cacheReadTokens": 9596608,
         "cacheWriteTokens": 0,
-        "reasoningTokens": 57383,
-        "totalTokens": 10259142,
-        "sessionFiles": 5
+        "reasoningTokens": 62738,
+        "totalTokens": 10654193,
+        "sessionFiles": 8
       }
     }
   }
