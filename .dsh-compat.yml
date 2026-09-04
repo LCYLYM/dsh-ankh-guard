@@ -3,18 +3,18 @@ watch:
   channel: latest
 repair:
   dsh_version: 0.1.1-rc.2
-  # xpeach exposes an OpenAI-compatible endpoint; keep Guardian's registered
-  # DeepSeek adapter and override its route below.
+  # This gateway exposes an OpenAI-compatible API. DSH appends
+  # /chat/completions to the configured API root.
   provider: deepseek-official
-  model: grok-4.6
+  model: glm-5.3-flash
   start_policy: immediate
   search:
     enabled: false
-    model: grok-4.6
+    model: glm-5.3-flash
 credentials:
   api_key_env: DEEPSEEK_API_KEY
-  base_url: https://fast.xpeach.codes/v1
-  search_base_url: https://fast.xpeach.codes/v1
+  base_url: https://api.b.ai/v1
+  search_base_url: https://api.b.ai/v1
 budget:
   max_tokens: 4000000
   max_cny: 3
