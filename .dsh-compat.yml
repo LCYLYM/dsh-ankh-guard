@@ -1,21 +1,22 @@
 schema: 1
 watch:
-  channel: latest
+  channel: 0.1.2-rc.1
 repair:
   dsh_version: 0.1.1-rc.2
+  max_attempts: 3
   # This gateway exposes an OpenAI-compatible API. DSH appends
   # /chat/completions to the configured API root.
   provider: deepseek-official
-  model: glm-5.3-flash
+  model: qwen3.8-flash
   max_output_tokens: 131072
   start_policy: immediate
   search:
     enabled: false
-    model: glm-5.3-flash
+    model: qwen3.8-flash
 credentials:
   api_key_env: DEEPSEEK_API_KEY
-  base_url: https://api.b.ai/v1
-  search_base_url: https://api.b.ai/v1
+  base_url: https://fast.xpeach.codes/v1
+  search_base_url: https://fast.xpeach.codes/v1
 budget:
   max_tokens: 4000000
   max_cny: 3
