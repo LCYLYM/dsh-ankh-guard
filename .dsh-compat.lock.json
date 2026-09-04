@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "resetBudget": "Y",
+  "resetBudget": "N",
   "verified": {
     "snapshot_key": "21f404dc0e619e7bd639136169db104e90d2d2bab351f0a85144f71267121260",
     "source_commit": "bbdb4bd134181fc2582b37ae137443a684ee30d6",
@@ -160,23 +160,23 @@
       ],
       "lifetime_active_ms": 770269,
       "lifetime_attempts": 1,
-      "status": "BLOCKED_CONFIG",
-      "automatic_repair_used": false,
-      "attempts_used": 0,
-      "base_commit": "97c4b758e3e8b8d8aa2352f020ab61e31795ff88",
+      "status": "BLOCKED_EXTERNAL",
+      "automatic_repair_used": true,
+      "attempts_used": 2,
+      "base_commit": "cebdaa62abcfe1f498919a81af0f45859992ade3",
       "repair_dsh_version": "0.1.1-rc.2",
       "provider": "deepseek-official",
-      "model": "grok-4.6",
-      "route_fingerprint": "7f4fa6d6f3bdb11cd21af3a943bd4af8273e85e2371ac98460f6217188d367ae",
-      "input_fingerprint": "6bc27b8a11818274340f287b1fa7d1aae15707fd286208ab0048a2534733d664",
+      "model": "glm-5.3-flash",
+      "route_fingerprint": "9850ed862a9cfd836d66a21b9b35b76d25b538fa78f3d85af0e29f3014153aac",
+      "input_fingerprint": "bdd6fddfee26ba6f085c7941a3a389af2eec175e76b73bf7010ebe7481d9a74a",
       "usage": {
-        "inputTokens": 152279,
-        "outputTokens": 25783,
-        "cacheReadTokens": 2200704,
+        "inputTokens": 563576,
+        "outputTokens": 54870,
+        "cacheReadTokens": 6935104,
         "cacheWriteTokens": 0,
-        "reasoningTokens": 18949,
-        "totalTokens": 2378766,
-        "sessionFiles": 2
+        "reasoningTokens": 36441,
+        "totalTokens": 7553550,
+        "sessionFiles": 4
       },
       "estimated_cny": {
         "amount": null,
@@ -184,7 +184,7 @@
         "revision": "deepseek-public-2026-08-21",
         "known": false
       },
-      "active_ms": 990171,
+      "active_ms": 2783691,
       "converge_message_sent": false,
       "converge_message_due": false,
       "limits": {
@@ -194,10 +194,10 @@
         "max_attempts": 2
       },
       "blocker": {
-        "code": "MODEL_ENDPOINT_NOT_FOUND",
-        "message": "模型 API 端点不存在（404）。请检查 base URL 后手工重跑。"
+        "code": "CANDIDATE_GRAPH_DRIFT",
+        "message": "独立 verifier 因 CANDIDATE_GRAPH_DRIFT 停止；这不是新的插件兼容失败，因此不会再次调用维修模型。"
       },
-      "finished_at": "2026-09-04T05:24:37.617Z",
+      "finished_at": "2026-09-04T10:02:48.258Z",
       "lifetime_usage": {
         "inputTokens": 320192,
         "outputTokens": 29560,
