@@ -6,16 +6,17 @@ repair:
   # This gateway exposes an OpenAI-compatible API. DSH appends
   # /chat/completions to the configured API root.
   provider: deepseek-official
-  model: qwen3.8-flash
+  model: auto
+  reasoning_effort: high
   max_output_tokens: 131072
   start_policy: immediate
   search:
     enabled: false
-    model: qwen3.8-flash
+    model: auto
 credentials:
   api_key_env: DEEPSEEK_API_KEY
-  base_url: https://fast.xpeach.codes/v1
-  search_base_url: https://fast.xpeach.codes/v1
+  base_url: https://ai.anna.tf/v1
+  search_base_url: https://ai.anna.tf/v1
 budget:
   max_tokens: 4000000
   max_cny: 3
