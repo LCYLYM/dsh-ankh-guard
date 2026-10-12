@@ -328,7 +328,7 @@
       "lifetime_attempts": 1,
       "status": "BLOCKED_EXTERNAL",
       "automatic_repair_used": true,
-      "attempts_used": 5,
+      "attempts_used": 6,
       "base_commit": "9f77d52eed37bc4f3f2ca91f15445ee38db84337",
       "repair_dsh_version": "0.2.1-alpha.2",
       "provider": "deepseek-official",
