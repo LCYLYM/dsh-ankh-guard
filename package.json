@@ -98,7 +98,7 @@
       "patch": "./cordis.patch.yml"
     },
     "compat": {
-      "minHost": "0.1.0-rc.6",
+      "minHost": "0.2.1-alpha.2",
       "maxHost": "0.2.1-alpha.2",
       "notes": "composition-preflight gate runs via the standalone preflight-runner (resolves official packages from a live harness checkout, no fork patch); on the npm line without a checkout it degrades to a notice, every other capability intact"
     }
