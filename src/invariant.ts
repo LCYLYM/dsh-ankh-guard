@@ -6,7 +6,6 @@
 /* jscpd:ignore-start */
 import { existsSync } from 'node:fs'
 import type { Context } from '@deepseek-ai/cordis'
-import type { InvariantInstaller } from '@deepseek-ai/dsh-invariants'
 import { resolveStateDir } from './defaults.ts'
 import { loadState, stateFilePath } from './state.ts'
 
@@ -14,8 +13,11 @@ const PACKAGE_NAME = '@khorsheed/dsh-ankh-guard'
 
 /** Cordis companion plugin name. */
 export const name = 'ankh-guard-invariant'
-/** Service required before the companion can reserve package ownership. */
-export const inject = ['invariants']
+/** The owned-data check also runs without the removed host registry. */
+export const inject: readonly string[] = []
+
+/** Package-owned check; the target host no longer ships an invariant registry. */
+export type InvariantInstaller = (ctx: Context, fail: (message: string) => void) => void
 
 /**
  * Owned-data check: the package's state file, when present at the default
@@ -42,6 +44,14 @@ export const install: InvariantInstaller = (_ctx, fail) => {
  * @param ctx - Cordis context carrying the invariant service.
  * @returns The installed registration's disposer after setup succeeds.
  */
-export const apply = (ctx: Context): Promise<() => void> =>
-  Promise.resolve(ctx.invariants.register(PACKAGE_NAME, install))
+export const apply = (ctx: Context): Promise<() => void> => {
+  const registry = ctx.get('invariants') as {
+    register(name: string, installer: InvariantInstaller): (() => void) | Promise<() => void>
+  } | undefined
+  if (registry !== undefined) return Promise.resolve(registry.register(PACKAGE_NAME, install))
+  // Preserve the owned-data validation when explicitly mounted without the
+  // removed host service. Corrupt state still throws instead of passing.
+  install(ctx, message => { throw new Error(message) })
+  return Promise.resolve(() => {})
+}
 /* jscpd:ignore-end */

@@ -19,11 +19,18 @@
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { connect } from 'node:net'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import { createUserMessage, type ContextFormed } from '@deepseek-ai/dsh-llm'
 // Type-only: pulls the agent package's event merge ('agent/pre-step').
 import type {} from '@deepseek-ai/dsh-agent'
 import type { AgentOptions, ResumeAgentOptions } from '@deepseek-ai/dsh-agent'
-import { resolveSessionPreset, type PresetBearingSession } from '@deepseek-ai/dsh-agent-presets'
+import { readSessionPreset, type PresetSessionReader } from './session-preset.ts'
+
+// The target uses producer-owned kinds instead of a shared "plugin" kind.
+declare module '@deepseek-ai/dsh-llm' {
+  interface MessageSourceMap {
+    'ankh-guard': { kind: 'ankh-guard'; plugin: string } & ContextFormed
+  }
+}
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync, unlinkSync } from 'node:fs'
 import { resolveRepoDir, resolveStateDir, SRC_ARTIFACT_PATTERN } from './defaults.ts'
@@ -229,12 +236,12 @@ export function apply(ctx: Context, config: SelfRestartGuardConfig): void {
   // at its next step — no wake) that restarts go through the guard CLI. This
   // is the discovery channel for agents that never read the package README —
   // the failure mode where a fresh-machine agent hand-rolls a restart script.
-  ctx.on('agent/created', ({ agent }) => {
+  ctx.on('agent/created', ({ agent }): undefined => {
     if (!ctx.agents.roots().includes(agent)) return
     const text = bootNoticeText()
     ;(agent as { inject?: (message: ReturnType<typeof createUserMessage>) => void }).inject?.(createUserMessage({
       content: [{ type: 'text', text }],
-      source: { kind: 'plugin', plugin: name, form: 'snapshot', sections: [{ name: 'restart', text }] },
+      source: { kind: 'ankh-guard', plugin: name, form: 'snapshot', sections: [{ name: 'restart', text }] },
     }))
   })
 
@@ -242,7 +249,7 @@ export function apply(ctx: Context, config: SelfRestartGuardConfig): void {
     type FollowupAgent = { followup: (message: ReturnType<typeof createUserMessage>) => void }
     const pluginMessage = (text: string): ReturnType<typeof createUserMessage> => createUserMessage({
       content: [{ type: 'text', text }],
-      source: { kind: 'plugin', plugin: name, form: 'snapshot', sections: [{ name: 'restart', text }] },
+      source: { kind: 'ankh-guard', plugin: name, form: 'snapshot', sections: [{ name: 'restart', text }] },
     })
     // Interrupted sessions awaiting their `agent/created` to receive the
     // "continue" followup: session id → exitAt of the interrupting exit.
@@ -350,12 +357,9 @@ export function apply(ctx: Context, config: SelfRestartGuardConfig): void {
       const presets = ctx.get('agentPresets') as
         | { resolve(presetId?: string): Promise<{ id: string }>; mount(agentCtx: Context, presetId?: string): Promise<unknown> }
         | undefined
-      const persistence = ctx.get('sessionPersistence') as
-        | { inspect(sessionId: string): Promise<{ meta: PresetBearingSession['header']; events: PresetBearingSession['events'] }> }
-        | undefined
+      const persistence = ctx.get('sessionPersistence') as PresetSessionReader | undefined
       if (presets !== undefined && persistence !== undefined) {
-        const inspected = await persistence.inspect(id)
-        const presetId = resolveSessionPreset({ header: inspected.meta, events: inspected.events })
+        const presetId = await readSessionPreset(persistence, id)
         setup = async (agentCtx) => { await presets.mount(agentCtx, (await presets.resolve(presetId)).id) }
       }
       return { resumeSessionId: id, agentOptions, ...(setup === undefined ? {} : { setup }) } as ResumeAgentOptions
@@ -418,7 +422,7 @@ export function apply(ctx: Context, config: SelfRestartGuardConfig): void {
       ctx.effect(() => () => { clearTimeout(timer) })
     }
 
-    ctx.on('agent/created', ({ agent }) => {
+    ctx.on('agent/created', ({ agent }): undefined => {
       if (!ctx.agents.roots().includes(agent)) return
       deliver(agent)
     })
@@ -443,7 +447,7 @@ export function apply(ctx: Context, config: SelfRestartGuardConfig): void {
           createUserMessage({
             content: [{ type: 'text', text }],
             source: {
-              kind: 'plugin', plugin: name, form: 'snapshot',
+              kind: 'ankh-guard', plugin: name, form: 'snapshot',
               sections: [{ name: 'restart', text }],
             },
           }),
