@@ -2,9 +2,9 @@
   "schema": 1,
   "resetBudget": "N",
   "verified": {
-    "snapshot_key": "3abe7de05c0bc06698fb07c8b26e4c5d17c36ae0ca8797b645c7eec360f08562",
-    "source_commit": "b5224d42010d0f968b7d585cb77124dbb903129d",
-    "source_tree_digest": "05c43859d6f851ecb046307bd723bff1d5ae5e69357da4d78470bca9d5cb25c5",
+    "snapshot_key": "20d578c4c5eb61949a6cd197fac7f0ef6c80b0042462b193c488dc1f14f72207",
+    "source_commit": "a1bb5950414346e04e22be29d851a8da6a080042",
+    "source_tree_digest": "91d41dd10fd045faf33b0808174c69710dc1b313b35d70ec89ebc48ad8ba2599",
     "dsh": {
       "package": "@deepseek-ai/dsh",
       "version": "0.2.1-alpha.2",
@@ -27,14 +27,14 @@
     },
     "runtime": {
       "node": {
-        "exactVersion": "24.13.1",
+        "exactVersion": "24.21.0",
         "effectiveRange": ">=24.0.0 <25.0.0",
         "source": "fallback-node-24-lts",
         "declarations": {}
       },
       "packageManager": {
         "name": "npm",
-        "exactVersion": "11.8.0",
+        "exactVersion": "11.19.0",
         "source": "package-lock.json",
         "lockfiles": [
           "package-lock.json"
@@ -42,14 +42,14 @@
       },
       "runner": {
         "configuredLabel": "ubuntu-24.04",
-        "actualLabel": "local",
-        "os": "darwin",
-        "arch": "arm64",
-        "githubActions": false
+        "actualLabel": "GitHub Actions 1000002490",
+        "os": "Linux",
+        "arch": "x64",
+        "githubActions": true
       }
     },
-    "verified_at": "2026-10-12T03:34:34.634Z",
-    "report_url": null
+    "verified_at": "2026-10-12T03:39:15.313Z",
+    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/38200443733"
   },
   "campaigns": {
     "0.1.1-rc.2": {
