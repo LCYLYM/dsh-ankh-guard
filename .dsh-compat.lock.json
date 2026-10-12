@@ -326,23 +326,23 @@
       ],
       "lifetime_active_ms": 983,
       "lifetime_attempts": 1,
-      "status": "BLOCKED",
+      "status": "BLOCKED_EXTERNAL",
       "automatic_repair_used": true,
-      "attempts_used": 4,
-      "base_commit": "7f7cec00d2e3ad337ceeacd9ed4d795b6bdd57f9",
+      "attempts_used": 6,
+      "base_commit": "9f77d52eed37bc4f3f2ca91f15445ee38db84337",
       "repair_dsh_version": "0.2.1-alpha.2",
       "provider": "deepseek-official",
       "model": "auto",
       "route_fingerprint": "e3b3ba05dc17aaf6e7e9b09484aae5733da503811fb724d81f9b48d59edccb25",
-      "input_fingerprint": "c0420ca67e337c0684355cdf8cb4980ef16b04cf690590281327466cb449bcf4",
+      "input_fingerprint": "03fce0763c25f03d88de7ad7af07de25192c629892c13259a5b1c9e2b6e30510",
       "usage": {
-        "inputTokens": 7200416,
-        "outputTokens": 7945,
+        "inputTokens": 12979740,
+        "outputTokens": 59324,
         "cacheReadTokens": 0,
         "cacheWriteTokens": 0,
         "reasoningTokens": 0,
-        "totalTokens": 7208361,
-        "sessionFiles": 4
+        "totalTokens": 13039064,
+        "sessionFiles": 6
       },
       "estimated_cny": {
         "amount": null,
@@ -350,20 +350,20 @@
         "revision": "deepseek-public-2026-08-21",
         "known": false
       },
-      "active_ms": 3571885,
+      "active_ms": 6127365,
       "converge_message_sent": true,
       "converge_message_due": false,
       "limits": {
         "max_tokens": 100000000,
         "max_cny": 3,
         "max_wall_minutes": 180,
-        "max_attempts": 4
+        "max_attempts": 6
       },
       "blocker": {
-        "code": "BUDGET_EXHAUSTED",
-        "message": "本版本维修预算已用完，需要 resetBudget 或增加额度后才能继续。"
+        "code": "MODEL_PROVIDER_5XX",
+        "message": "模型服务返回 5xx 或明确报告过载，每两分钟自动重试一次，最多再试两次；仍失败则冻结定时重跑。"
       },
-      "finished_at": "2026-10-12T01:24:33.350Z",
+      "finished_at": "2026-10-12T02:33:04.393Z",
       "lifetime_usage": {
         "inputTokens": 0,
         "outputTokens": 0,
