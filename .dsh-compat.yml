@@ -9,7 +9,7 @@ repair:
   model: auto
   reasoning_effort: high
   max_output_tokens: 65536
-  max_attempts: 4
+  max_attempts: 6
   start_policy: immediate
   search:
     enabled: false
