@@ -2,14 +2,14 @@
   "schema": 1,
   "resetBudget": "N",
   "verified": {
-    "snapshot_key": "20d578c4c5eb61949a6cd197fac7f0ef6c80b0042462b193c488dc1f14f72207",
-    "source_commit": "a1bb5950414346e04e22be29d851a8da6a080042",
+    "snapshot_key": "2c41c21cac07cf329b21d4e2417c1891aae2563f91a36a1dcdfb23d10ff70697",
+    "source_commit": "837d5d47447ca00a138520316b6be0f67ca903f1",
     "source_tree_digest": "91d41dd10fd045faf33b0808174c69710dc1b313b35d70ec89ebc48ad8ba2599",
     "dsh": {
       "package": "@deepseek-ai/dsh",
       "version": "0.2.1-alpha.2",
       "integrity": "sha512-CkRE0uAOg2ldL2VpfF4cNRsl178CH5nM+8YklPrlMZl5ln0KhVfd42dJuRlgOXZmkpizCRvrVS8LAL+GKfgk0w==",
-      "graph_digest": "ce6e4a6e5b2620861b970b867cbdea7bc97c7fd976bbbb98010dc85a0818bf3d",
+      "graph_digest": "f7c8db5e7fa9aafc16a8560eaea127eb93cb505535f7fd897d4e0be55d32d478",
       "release": {
         "tag": "dsh-v0.2.1-alpha.2",
         "version": "0.2.1-alpha.2",
@@ -42,14 +42,14 @@
       },
       "runner": {
         "configuredLabel": "ubuntu-24.04",
-        "actualLabel": "GitHub Actions 1000002490",
+        "actualLabel": "GitHub Actions 1000002518",
         "os": "Linux",
         "arch": "x64",
         "githubActions": true
       }
     },
-    "verified_at": "2026-10-12T03:39:15.313Z",
-    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/38200443733"
+    "verified_at": "2026-10-13T00:49:16.672Z",
+    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/38328934285"
   },
   "campaigns": {
     "0.1.1-rc.2": {
