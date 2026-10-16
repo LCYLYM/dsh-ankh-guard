@@ -381,6 +381,50 @@
         "totalTokens": 0,
         "sessionFiles": 0
       }
+    },
+    "0.2.1-alpha.5": {
+      "epoch": 1,
+      "history": [],
+      "lifetime_active_ms": 0,
+      "lifetime_attempts": 0,
+      "status": "BLOCKED",
+      "automatic_repair_used": true,
+      "attempts_used": 2,
+      "base_commit": "837d5d47447ca00a138520316b6be0f67ca903f1",
+      "repair_dsh_version": "0.2.1-alpha.2",
+      "provider": "deepseek-official",
+      "model": "auto",
+      "route_fingerprint": "e3b3ba05dc17aaf6e7e9b09484aae5733da503811fb724d81f9b48d59edccb25",
+      "input_fingerprint": "a5fe99365587b449ca551d820d5ef84dea023070d4712c116279c0a5e72ca349",
+      "usage": {
+        "inputTokens": 778037,
+        "outputTokens": 2835,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "reasoningTokens": 0,
+        "totalTokens": 780872,
+        "sessionFiles": 2
+      },
+      "estimated_cny": {
+        "amount": null,
+        "band": "low_price",
+        "revision": "deepseek-public-2026-08-21",
+        "known": false
+      },
+      "active_ms": 1598463,
+      "converge_message_sent": false,
+      "converge_message_due": false,
+      "limits": {
+        "max_tokens": 100000000,
+        "max_cny": 3,
+        "max_wall_minutes": 180,
+        "max_attempts": 6
+      },
+      "blocker": {
+        "code": "COMMAND_FAILED",
+        "message": "dsh --profile headless --patch <REPAIR_OVERLAY> <REFINEMENT_PROMPT> exited with code 1"
+      },
+      "finished_at": "2026-10-16T17:13:51.404Z"
     }
   }
 }
