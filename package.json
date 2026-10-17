@@ -42,10 +42,10 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "~4.0.5-alpha.1",
-    "@deepseek-ai/dsh-agent": "0.2.1-alpha.2",
-    "@deepseek-ai/dsh-agent-preset-registry": "0.2.1-alpha.2",
-    "@deepseek-ai/dsh-llm": "0.2.1-alpha.2",
-    "@deepseek-ai/dsh-session-persistence": "0.2.1-alpha.2",
+    "@deepseek-ai/dsh-agent": ">=0.2.1-alpha.2 <=0.2.1-rc.2",
+    "@deepseek-ai/dsh-agent-preset-registry": ">=0.2.1-alpha.2 <=0.2.1-rc.2",
+    "@deepseek-ai/dsh-llm": ">=0.2.1-alpha.2 <=0.2.1-rc.2",
+    "@deepseek-ai/dsh-session-persistence": ">=0.2.1-alpha.2 <=0.2.1-rc.2",
     "@deepseek-ai/schemastery": "~3.18.5-alpha.1"
   },
   "devDependencies": {
@@ -99,7 +99,7 @@
     },
     "compat": {
       "minHost": "0.2.1-alpha.2",
-      "maxHost": "0.2.1-alpha.2",
+      "maxHost": "0.2.1-rc.2",
       "notes": "composition-preflight gate runs via the standalone preflight-runner (resolves official packages from a live harness checkout, no fork patch); on the npm line without a checkout it degrades to a notice, every other capability intact"
     }
   }

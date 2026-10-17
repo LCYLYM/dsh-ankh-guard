@@ -2,27 +2,27 @@
   "schema": 1,
   "resetBudget": "N",
   "verified": {
-    "snapshot_key": "20d578c4c5eb61949a6cd197fac7f0ef6c80b0042462b193c488dc1f14f72207",
-    "source_commit": "a1bb5950414346e04e22be29d851a8da6a080042",
-    "source_tree_digest": "91d41dd10fd045faf33b0808174c69710dc1b313b35d70ec89ebc48ad8ba2599",
+    "snapshot_key": "1b0a19bfc51e3fc35c275b19ff1d12beecffef7777e1d9e0ab13ee7b12231621",
+    "source_commit": "837d5d47447ca00a138520316b6be0f67ca903f1",
+    "source_tree_digest": "4f603d4d4445f397eea5aa423ee4d3522a7beb77fdeeba545aa097de4fc76684",
     "dsh": {
       "package": "@deepseek-ai/dsh",
-      "version": "0.2.1-alpha.2",
-      "integrity": "sha512-CkRE0uAOg2ldL2VpfF4cNRsl178CH5nM+8YklPrlMZl5ln0KhVfd42dJuRlgOXZmkpizCRvrVS8LAL+GKfgk0w==",
-      "graph_digest": "ce6e4a6e5b2620861b970b867cbdea7bc97c7fd976bbbb98010dc85a0818bf3d",
+      "version": "0.2.1-rc.2",
+      "integrity": "sha512-tvY+yhfKRifthbqPe/OK0AYxM5ZkvqfYq/jMYgJcEUxiRRL1Vwra3Ti5TB6AXgSWQdiPHYh/Vp6SJa9yHwMNuw==",
+      "graph_digest": "06d1309e79580c68d98ca439842014e4afa2957ba4f87a5870e76f05db945e5e",
       "release": {
-        "tag": "dsh-v0.2.1-alpha.2",
-        "version": "0.2.1-alpha.2",
-        "commit": "d743267388641bc76f17c45ce8b4c231aed1d32c",
-        "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.2",
-        "publishedAt": "2026-10-09T11:09:26Z",
+        "tag": "dsh-v0.2.1-rc.2",
+        "version": "0.2.1-rc.2",
+        "commit": "687f282e8625c6b8d11ff58211a90524be2e4317",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.2",
+        "publishedAt": "2026-10-17T08:16:33Z",
         "prerelease": true
       }
     },
     "plugin": {
       "package": "@khorsheed/dsh-ankh-guard",
       "version": "0.1.0-rc.8.9",
-      "tarball_sha256": "3f4a22b206edd75318f6930f8ee10ee97a9d53fa541092eea89240d977ba2a8b",
+      "tarball_sha256": "f0dceb1ce9f01467e37fa1984e960b39481de76d28c7839150e9e4aee2093bf2",
       "contract_sha256": "c657729dd57ee25c0ea1e68b58a3772facd62f7afa77161b2803d0f89391423a"
     },
     "runtime": {
@@ -42,14 +42,14 @@
       },
       "runner": {
         "configuredLabel": "ubuntu-24.04",
-        "actualLabel": "GitHub Actions 1000002490",
+        "actualLabel": "GitHub Actions 1000002794",
         "os": "Linux",
         "arch": "x64",
         "githubActions": true
       }
     },
-    "verified_at": "2026-10-12T03:39:15.313Z",
-    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/38200443733"
+    "verified_at": "2026-10-17T11:05:01.510Z",
+    "report_url": "https://github.com/LCYLYM/dsh-ankh-guard/actions/runs/39026502613"
   },
   "campaigns": {
     "0.1.1-rc.2": {
@@ -381,6 +381,46 @@
         "totalTokens": 0,
         "sessionFiles": 0
       }
+    },
+    "0.2.1-rc.2": {
+      "epoch": 1,
+      "history": [],
+      "lifetime_active_ms": 0,
+      "lifetime_attempts": 0,
+      "status": "PASS",
+      "automatic_repair_used": true,
+      "attempts_used": 2,
+      "base_commit": "837d5d47447ca00a138520316b6be0f67ca903f1",
+      "repair_dsh_version": "0.2.1-alpha.2",
+      "provider": "deepseek-official",
+      "model": "auto",
+      "route_fingerprint": "e3b3ba05dc17aaf6e7e9b09484aae5733da503811fb724d81f9b48d59edccb25",
+      "input_fingerprint": "b63c7a9521e57447854de95bde3652431bd31604ae27caf96205b1040c32cfee",
+      "usage": {
+        "inputTokens": 0,
+        "outputTokens": 28640,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "reasoningTokens": 0,
+        "totalTokens": 28640,
+        "sessionFiles": 2
+      },
+      "estimated_cny": {
+        "amount": null,
+        "band": "low_price",
+        "revision": "deepseek-public-2026-08-21",
+        "known": false
+      },
+      "active_ms": 623587,
+      "converge_message_sent": false,
+      "converge_message_due": false,
+      "limits": {
+        "max_tokens": 100000000,
+        "max_cny": 3,
+        "max_wall_minutes": 180,
+        "max_attempts": 6
+      },
+      "finished_at": "2026-10-17T11:05:01.992Z"
     }
   }
 }
