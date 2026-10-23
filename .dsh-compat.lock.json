@@ -381,6 +381,50 @@
         "totalTokens": 0,
         "sessionFiles": 0
       }
+    },
+    "0.2.1-rc.3": {
+      "epoch": 1,
+      "history": [],
+      "lifetime_active_ms": 0,
+      "lifetime_attempts": 0,
+      "status": "BLOCKED_CONFIG",
+      "automatic_repair_used": false,
+      "attempts_used": 0,
+      "base_commit": "837d5d47447ca00a138520316b6be0f67ca903f1",
+      "repair_dsh_version": "0.2.1-alpha.2",
+      "provider": "deepseek-official",
+      "model": "auto",
+      "route_fingerprint": "e3b3ba05dc17aaf6e7e9b09484aae5733da503811fb724d81f9b48d59edccb25",
+      "input_fingerprint": "14183c54004034c68bf9d4be18f9bdde5d508ec0621885c03db5479401bee385",
+      "usage": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "reasoningTokens": 0,
+        "totalTokens": 0,
+        "sessionFiles": 1
+      },
+      "estimated_cny": {
+        "amount": null,
+        "band": "low_price",
+        "revision": "deepseek-public-2026-08-21",
+        "known": false
+      },
+      "active_ms": 1846,
+      "converge_message_sent": false,
+      "converge_message_due": false,
+      "limits": {
+        "max_tokens": 100000000,
+        "max_cny": 3,
+        "max_wall_minutes": 180,
+        "max_attempts": 6
+      },
+      "blocker": {
+        "code": "MODEL_CREDENTIAL_REJECTED",
+        "message": "模型服务拒绝了凭据（401/403）。请更新仓库 Secret 后手工重跑。"
+      },
+      "finished_at": "2026-10-23T17:17:01.781Z"
     }
   }
 }
